@@ -54,10 +54,82 @@
         & img
             width: 20px
             margin-bottom: 7px
+        &s 
+            max-width: 850px
+    &-d-block
+        display: block
+@media (min-width: 425px )
+    .hero
+        &-d-block
+            display: inline  
+        &-wrapper
+            &::before
+                // width: 216%
+                // right: -58%
+                background-position: center right 80%
+        &-subtitle
+            font-size: 26px
+            &::before
+                left: 180px
+                transform: scale(70%)
+            &::after
+                left: 247px
 
-            
-
-@media (min-width: 768px )
+@media (min-width: 576px )
     .hero
         &-title
             font-size: 42px
+        &-feature
+            &-title
+                font-size: 16px
+            &-subtitle
+                font-size: 14px
+            & img
+                width: 30px
+
+@media (min-width: 768px )
+    .hero
+        &-wrapper
+            &::before 
+                width: 140vw
+                right: auto
+                // background: url('../img/hero/hero-bg.jpg') center right 155% no-repeat
+                // background-size: cover
+                background-position: top center
+                transform: none
+        &-title
+            font-size: 52px
+        &-subtitle
+            font-size: 28px
+            width: 100%
+            display: inline-block
+            &::before
+                left: 180px
+                transform: scale(100%)
+                bottom: -80px
+            &::after
+                font-size: 30px
+                left: 271px
+                bottom: -80px
+        &-btn 
+            margin-top: 120px
+
+@media (min-width: 950px )
+    .hero
+        &-wrapper
+            &::before 
+                width: 113vw
+
+@media (min-width: 1111px )
+    .hero
+        &-wrapper
+            &::before 
+                width: 100vw
+@media (min-width: 992px )
+    .hero
+        &-block 
+            &-features
+                max-width: 630px
+                background: 0
+        &-title 
+            font-size: 65px 

@@ -44,4 +44,55 @@
             margin-right: 6px
 
 
-// @media (max-width: 366px )
+@media (min-width: 425px )
+    .header
+        &-social
+            & a img
+                width: 27px
+                margin-right: 6px
+    .nav
+        &bar
+            &-brand
+                & img
+                    max-width: 170px
+
+
+@media (min-width: 576px )
+    .header
+        &-social
+            & a img
+                width: 34px
+                margin-right: 10px
+    .nav
+        &bar
+            &-collapse
+                left: calc(-55vw + 22px + 270px)
+@media (min-width: 768px )
+    .nav
+        &bar
+            &-brand
+                & img
+                    max-width: none
+            &-collapse
+                left: auto
+                right: -30vw
+                width: 50vw
+
+
+@media (min-width: 992px )
+    .nav
+        &bar
+            justify-content: space-between
+            align-items: center
+            &-collapse
+                backdrop-filter: none
+                background: 0
+    .header
+        &-social
+            display: none
+@media (min-width: 1200px )
+    .header
+        &-social
+            display: block                
+                
+

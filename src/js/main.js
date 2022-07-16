@@ -1,6 +1,4 @@
-// if ($(window).width() > 991) {
-//     $( ".form-block-img img" ).attr("src","img/form/girl-clear.png");
-// };
+
 
 // // Smooth scroll
 // $('#headerNavbar a[href^="#"]').click(function (){
@@ -27,3 +25,27 @@
 //       },
 //     });
 // });
+function navbarSwap() {
+    if ($('.navbar-toggler').attr('aria-expanded')!="true") {
+        // console.log('открыл');
+        $('.navbar-toggler img').attr("src", "img/header/burger-close.svg");
+    } else {
+        // console.log("закрыл");
+        $('.navbar-toggler img').attr("src", "img/header/burger-icon.svg");
+    }
+} 
+// console.log();
+if ($(window).width() > 991) {
+    socialIconsBlock = $( ".header-social" )
+    navbarMenu = $( ".navbar-nav" )
+    bigParent = $('.navbar')
+    headerContacts = $('.header-contacts')
+    // Removing
+    socialIconsBlock.remove()
+    navbarMenu.remove()
+    headerContacts.remove()
+    bigParent.append(navbarMenu)
+    bigParent.append(socialIconsBlock)
+    bigParent.append(headerContacts)
+    console.log('Ь,,');
+};
