@@ -1,0 +1,49 @@
+.additional
+    &-card
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding: 18px 10px
+        background-color: #fff
+        & img 
+            object-fit: contain
+            max-width: 50px
+            margin-right: 14px
+        &-title 
+            font-size: 14px
+            color: $primary
+            font-weight: 500
+        & p 
+            margin-top: 8px
+            font-size: 12px
+    &-section
+        position: relative
+        z-index: 2
+        overflow-x: hidden !important
+.section-bg
+    position: absolute
+    opacity: 0.15
+    left: 0
+    top: 0
+    height: 100%
+    width: 100vw
+    object-fit: cover
+    z-index: -1
+
+
+
+@media (min-width: 576px )
+    .additional
+        &-card
+            padding: 25px 17px
+            & img
+                max-width: 80px
+                margin-right: 24px
+            &-title 
+                font-size: 22px
+            & p 
+                font-size: 16px
+// @media (min-width: 992px )
+//     .section-bg
+//         height: auto
+//         width: 100%
