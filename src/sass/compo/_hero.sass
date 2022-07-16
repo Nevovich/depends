@@ -1,0 +1,63 @@
+.hero
+    &-title
+        font-size: 36px
+        font-weight: bold
+    &-subtitle
+        font-size: 26px
+        position: relative
+        &::before
+            position: absolute
+            bottom: -63px
+            left: 80px
+            content: url('../img/hero/pseudo-arrow.png')
+            transform: scale(50%)
+        &::after
+            content: 'Даже сейчас'
+            font-size: 20px
+            text-transform: uppercase
+            position: absolute
+            bottom: -50px
+            left: 140px
+            color: $primary
+    &-wrapper
+        color: white
+        position: relative
+        overflow: hidden
+        // height: 1000px
+        // padding-top: 35px
+        &::before 
+            content: ""
+            position: absolute
+            width: 216%
+            height: 100vw
+            right: -58%
+            z-index: -1
+            background: url('../img/hero/hero-bg.jpg') center right 155% no-repeat
+            background-size: 125%
+            transform: rotate(90deg)
+    &-btn
+        margin-top: 80px
+    &-block 
+        &-text 
+            margin: 35px 0 94px
+        &-features
+            padding: 25px 0
+            background-color: rgba(0, 0, 0, 0.61)
+    &-feature
+        text-align: center
+        &-title 
+            color: $primary
+            font-weight: 500
+            font-size: 12px
+        &-subtitle
+            font-size: 10px
+        & img
+            width: 20px
+            margin-bottom: 7px
+
+            
+
+@media (min-width: 768px )
+    .hero
+        &-title
+            font-size: 42px
