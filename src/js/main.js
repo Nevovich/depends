@@ -36,16 +36,37 @@ function navbarSwap() {
 } 
 // console.log();
 if ($(window).width() > 991) {
-    socialIconsBlock = $( ".header-social" )
-    navbarMenu = $( ".navbar-nav" )
-    bigParent = $('.navbar')
-    headerContacts = $('.header-contacts')
+    // Header part
+    socialIconsBlock = $( "header .header-social" )
+    navbarMenu = $( "header .navbar-nav" )
+    bigParent = $('header .navbar')
+    headerContacts = $('header .header-contacts')
     // Removing
     socialIconsBlock.remove()
     navbarMenu.remove()
     headerContacts.remove()
+    $( "header #navbarNav" ).remove()
     bigParent.append(navbarMenu)
     bigParent.append(socialIconsBlock)
     bigParent.append(headerContacts)
-    console.log('Ь,,');
+    // console.log('Ь,,');
+    // Footer part
+    socialIconsBlock = $( ".footer-social" )
+    navbarMenu = $( ".footer-navbar" )
+    bigParent = $('.footer')
+    footerContacts = $('.footer-contacts')
+    imgParent = $('.footer-img-block')
+    // Removing
+    socialIconsBlock.remove()
+    navbarMenu.remove()
+    footerContacts.remove()
+    $( "header #navbarNav" ).remove()
+    bigParent.append(navbarMenu)
+    bigParent.append(socialIconsBlock)
+    imgParent.append(footerContacts)
+    $('.footer-social svg').attr('height', '42')
+};
+if ($(window).width() > 576) {
+    $('.footer-social svg').attr('height', '34')
+    $('.footer-social svg').attr('width', '34')
 };
