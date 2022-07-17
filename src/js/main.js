@@ -9,7 +9,7 @@
 // });
 
 // // Phone validation
-// $(".phone-validate").mask("+7 (999) 999-99-99");
+$(".form-tel").mask("+7 (999) 999-99-99");
 
 // // AJAX form sender
 // $('.form').on('submit', function(event) {
@@ -65,6 +65,8 @@ if ($(window).width() > 991) {
     bigParent.append(socialIconsBlock)
     imgParent.append(footerContacts)
     $('.footer-social svg').attr('height', '42')
+    // disable container in hero-features
+    $('#hero-feature-container').attr('class', 'container')
 };
 if ($(window).width() > 576) {
     $('.footer-social svg').attr('height', '34')
