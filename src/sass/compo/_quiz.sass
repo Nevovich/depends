@@ -1,0 +1,66 @@
+.quiz
+    &-block 
+        display: none
+        &-current 
+            display: block
+    &-top 
+        &-left 
+            background-color: $black
+            padding: 9px 20px
+            & p 
+                color: white
+                margin-bottom: 0
+                text-transform: uppercase
+                font-size: 11px
+        &-right 
+            background-color: $primary
+            padding: 10px 7px
+            font-size: 11px
+    &-form
+        &-title 
+            font-size: 14px
+            font-weight: 500
+            color: $primary
+        &-block 
+            background-color: $black
+            padding: 15px 20px
+        &-label 
+            color: white 
+            font-size: 10px
+            &.active
+                color: $primary !important
+                position: relative
+                &::before
+                    content: url(../img/quiz/caret.svg)
+                    position: absolute
+                    top: 0
+                    left: -9px
+            & input
+                display: none
+    &-img
+        width: 100%
+        &-block
+            position: relative
+        &-text 
+            position: absolute
+            z-index: 2
+            margin-left: 50vw
+            left: -50%
+            font-weight: bold
+            font-size: 120px
+            filter: blur(31px)
+            color: rgba(255, 255, 255, 0.62)
+    &-btn 
+        background: rgba(255, 255, 255, 0)
+        border: 1px solid $primary
+        color: $primary
+        font-size: 11px
+        padding: 8px 46px
+        margin-top: 22px
+        &:hover
+            box-shadow: 0px 4px 25px rgba(255, 168, 0, 0.69)
+            color: white
+
+
+
+// @media (min-width: 768px )

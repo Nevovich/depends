@@ -97,3 +97,33 @@ linkArrayEmail.forEach( function(i) {
     linkVal = i.textContent
     i.setAttribute('href', 'mailto:' + linkVal);
 });
+
+// for checkboxes in quiz
+const radiosArray = document.querySelectorAll(`.quiz-form-input input`)
+radiosArray.forEach( function(i) {
+    i.addEventListener('change', () => {
+            radiosArray.forEach( function(ij) {
+                if (ij.checked) {
+                    ij.parentElement.classList.add('active');
+                } else {
+                    ij.parentElement.classList.remove('active')
+                }
+            });
+    })
+
+});
+
+let quizNext = () => {
+    let currentQuizSlide = document.querySelectorAll(`.quiz-block-current`);
+    currentQuizSlide = currentQuizSlide[0]
+    console.log(currentQuizSlide);
+    let nextQuizSlide = currentQuizSlide.nextSibling.nextSibling;
+    if (nextQuizSlide.classList.contains('quiz-block-last') != true) {
+        currentQuizSlide.classList.remove('quiz-block-current');
+        nextQuizSlide.classList.add('quiz-block-current')
+    } else {
+        currentQuizSlide.classList.remove('quiz-block-current');
+        // nextQuizSlide.classList.add.quiz-block-current
+    };
+    // return false
+};
