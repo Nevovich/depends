@@ -1,0 +1,83 @@
+.how
+    &-list 
+        display: flex
+        flex-direction: column
+    &-block 
+        position: relative
+        max-width: 45vw
+        &:nth-child(even)
+            margin-left: auto
+            &:not(:last-child)::before
+                content: url(../img/how/arrow.svg)
+                position: absolute
+                bottom: -51px
+                left: 0%
+                transform: scaleX(-1)
+        &:nth-child(odd)
+            &:not(:last-child):before
+                content: url(../img/how/arrow.svg)
+                position: absolute
+                bottom: -51px
+                right: 24px
+    &-counter
+        font-size: 96px
+        margin-bottom: 0
+        line-height: 1.4
+        font-weight: bold
+    &-text 
+        font-size: 14px
+
+
+
+@media (min-width: 576px )
+    .how
+        &-counter
+            font-size: 126px
+        &-text 
+            font-size: 18px
+        &-block
+            text-align: center
+            max-width: 240px
+@media (min-width: 768px )
+    .how
+        &-list 
+            max-width: 600px
+@media (min-width: 992px )
+    .how
+        &-list 
+            max-width: none
+            flex-direction: row
+            justify-content: space-between
+        &-block 
+            position: relative
+            max-width: 45vw
+            align-self: flex-start
+            &:nth-child(even)
+                margin-left: 0
+                margin-top: 175px
+                &:not(:last-child)::before
+                    // bottom: -51px
+                    // left: 0%
+                    transform: scaleX(1)
+                    transform: scaleY(-1)
+                    opacity: 0
+                    top: -50px
+                    right: -30px
+                    bottom: auto
+                    left: auto
+            &:nth-child(odd)
+                &:not(:last-child):before
+                    opacity: 0
+                    right: 5px
+                    bottom: -80px
+@media (min-width: 1200px )
+    .how
+        &-block 
+            &:nth-child(even)
+                &:not(:last-child)::before
+                    opacity: 1
+            &:nth-child(odd)
+                &:not(:last-child):before
+                    opacity: 1
+            &:not(:last-child)
+                margin-right: 30px

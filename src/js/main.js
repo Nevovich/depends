@@ -72,3 +72,28 @@ if ($(window).width() > 576) {
     $('.footer-social svg').attr('height', '34')
     $('.footer-social svg').attr('width', '34')
 };
+
+// Inserting link tel: values to href
+const linkArray = document.querySelectorAll(`.link-insert`)
+let linkVal = ''
+linkArray.forEach( function(i) {
+    linkVal = i.textContent
+    linkVal = linkVal.replace(/[\s,(,),+,-]/g, '')
+    i.setAttribute('href', 'tel:+' + linkVal);
+});
+// Insert in whatssapp links
+const linkArrayWA = document.querySelectorAll(`.link-whatsapp`);
+linkArrayWA.forEach( function(i) {
+    i.setAttribute('href', 'whatsapp://send?phone=' + linkVal + '/');
+});
+// Insert in viber links
+const linkArrayViber = document.querySelectorAll(`.link-viber`);
+linkArrayViber.forEach( function(i) {
+    i.setAttribute('href', 'viber://add?number=' + linkVal);
+});
+
+const linkArrayEmail = document.querySelectorAll(`.link-insert-email`)
+linkArrayEmail.forEach( function(i) {
+    linkVal = i.textContent
+    i.setAttribute('href', 'mailto:' + linkVal);
+});
