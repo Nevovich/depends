@@ -30,14 +30,18 @@
         &::before 
             content: ""
             position: absolute
-            width: 216%
-            height: 100vw
-            bottom: 37%
-            right: -58%
+            height: 100%
+            width: 100vw
+            // width: 216%
+            // height: 100vw
+            // bottom: 37%
+            // right: -58%
             z-index: -1
-            background: url('../img/hero/hero-bg.jpg') center right 155% no-repeat
-            background-size: 125%
-            transform: rotate(90deg)
+            background: url('../img/hero/hero-bg-mobile.jpg') no-repeat
+            background-position: bottom 83% center
+            // background-size: 125%
+            background-size: cover
+            // transform: rotate(90deg)
     &-btn
         margin-top: 80px
     &-block 
@@ -99,6 +103,8 @@
                 right: auto
                 // background: url('../img/hero/hero-bg.jpg') center right 155% no-repeat
                 // background-size: cover
+                background: url('../img/hero/hero-bg.jpg') no-repeat
+                background-size: auto
                 background-position: top center
                 transform: none
         &-title
