@@ -35,16 +35,16 @@
                       <a class="nav-link" href="#">Главная</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Услуги</a>
+                      <a class="nav-link" href="#services">Услуги</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Партнёры</a>
+                      <a class="nav-link" href="#partners">Партнёры</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">О нас</a>
+                      <a class="nav-link" href="#about">О нас</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Контакты</a>
+                      <a class="nav-link" href="#form-section">Контакты</a>
                     </li>
                   </ul>
                   <div class="header-contacts d-flex flex-column align-items-center mt-lg-0">
@@ -67,12 +67,10 @@
             <div class="hero-block-text">
               <h1 class="hero-title">depends logistics</h1>
               <span class="hero-subtitle">Доставка грузов <span class="hero-d-block">по всему миру</span></span>
-              <button class="d-block btn prim-btn hero-btn">Заказать расчёт</button>
+              <a href="#form-section" class="btn prim-btn hero-btn">Заказать расчёт</a>
             </div>
           </div>
-          <div  id="hero-feature-container">
-              
-            
+          <div id="hero-feature-container">
             <div class="hero-block-features">
               <div class="d-flex container justify-content-between">
                 <div class="hero-feature d-flex flex-column align-items-center">
@@ -101,7 +99,7 @@
         </div>
     </header>
     <main>
-        <section class="section">
+        <section class="section" id="services">
           <div class="container">
             <div class="text-center">
               <span class="section-title">Услуги</span>
@@ -205,7 +203,7 @@
               </div>
             </div>
             <div class="d-flex justify-content-center">
-              <button class="d-block btn prim-btn">Заказать расчёт</button>
+              <a href="#form-section" class="d-block btn prim-btn">Заказать расчёт</a>
             </div>
           </div>
         </section>
@@ -223,22 +221,54 @@
                     <span class="quiz-img-text">1</span>
                   </div>
                   <div class="col-12 col-md-6 quiz-top-right">
-                    <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
+                    <p class="mb-0">Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
                   </div>
-                  <div class="col-12 col-md-6 px-0">
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
                       <span class="quiz-form-title">Какого объёма ваш багаж?</span>
                       <div class="quiz-form-input">
                         <label class="quiz-form-label">
-                          <input class="mb-0" type="radio" name="volume" value="A">
+                          <input class="mb-0" type="radio" name="объём" value="A">
                           A) Небольшой рюкзак.
                         </label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="B">Б) Чемодан, который можно взять в ручную кладь.</label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="C">В) Большой чемодан на колёсиках.</label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="D">Г) Два больших чемодана на колёсиках.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="объём" value="B">Б) Чемодан, который можно взять в ручную кладь.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="объём" value="C">В) Большой чемодан на колёсиках.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="объём" value="D">Г) Два больших чемодана на колёсиках.</label>
                       </div>
                       <div class="text-center">
-                        <button onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
+                        <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="quiz-block">
+                <div class="row">
+                  <div class="col-12 col-md-6 quiz-top-left">
+                    <p>Представьте, что вы планируете путешествие. <span class="prim d-block">Вы — заказчик, а ваш багаж — это груз.</span></p>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-img-block px-0">
+                    <img src="img/quiz/2.jpg" class="quiz-img">
+                    <span class="quiz-img-text">2</span>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-top-right">
+                    <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
+                  </div>
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
+                    <div class="quiz-form-block">
+                      <span class="quiz-form-title">У вас тяжелый багаж?</span>
+                      <div class="quiz-form-input">
+                        <label class="quiz-form-label">
+                          <input class="mb-0" type="radio" name="weight" value="A">
+                          А) Донесу в руках.
+                        </label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="weight" value="B">Б) Найму носильщика с тележкой.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="weight" value="C">В) «Газели» будет достаточно.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="weight" value="D">Г) Нужен «КАМАЗ» с большим прицепом.</label>
+                      </div>
+                      <div class="text-center">
+                        <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
                       </div>
                     </div>
                   </div>
@@ -250,26 +280,181 @@
                     <p>Представьте, что вы планируете путешествие. <span class="prim d-block">Вы — заказчик, а ваш багаж — это груз.</span></p>
                   </div>
                   <div class="col-12 col-md-6 quiz-img-block px-0">
-                    <img src="img/quiz/1.jpg" class="quiz-img">
-                    <span class="quiz-img-text">2</span>
+                    <img src="img/quiz/3.jpg" class="quiz-img">
+                    <span class="quiz-img-text">3</span>
                   </div>
                   <div class="col-12 col-md-6 quiz-top-right">
                     <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
                   </div>
-                  <div class="col-12 col-md-6 px-0">
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
-                      <span class="quiz-form-title">Сколько ценных вещей в вашем багаже?</span>
+                      <span class="quiz-form-title">Куда отправляетесь?</span>
                       <div class="quiz-form-input">
                         <label class="quiz-form-label">
-                          <input class="mb-0" type="radio" name="volume" value="A">
-                          A) Небольшой рюкзак.
+                          <input class="mb-0" type="radio" name="direction" value="A">
+                          А) Путешествовать по России.
                         </label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="B">Б) Чемодан, который можно взять в ручную кладь.</label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="C">В) Большой чемодан на колёсиках.</label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="D">Г) Два больших чемодана на колёсиках.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="direction" value="B">Б) Познавать культурные ценности Востока.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="direction" value="C">В) Почувствовать ритм Запада.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="direction" value="D">Г) В очень далёкую маленькую страну.</label>
                       </div>
                       <div class="text-center">
-                        <button onclick="quizNext();" class="btn quiz-btn">Далее</button>
+                        <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <div class="row">
+                  <div class="col-12 col-md-6 quiz-top-left">
+                    <p>Представьте, что вы планируете путешествие. <span class="prim d-block">Вы — заказчик, а ваш багаж — это груз.</span></p>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-img-block px-0">
+                    <img src="img/quiz/4.jpg" class="quiz-img">
+                    <span class="quiz-img-text">4</span>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-top-right">
+                    <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
+                  </div>
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
+                    <div class="quiz-form-block">
+                      <span class="quiz-form-title">Каким классом поедете?</span>
+                      <div class="quiz-form-input">
+                        <label class="quiz-form-label">
+                          <input class="mb-0" type="radio" name="comfort" value="A">
+                          А) Привык в «экономе»: в тесноте, да не в обиде.
+                        </label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="comfort" value="B">Б) Неплохо чувствую себя в «комфорте»: можно ноги вытянуть.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="comfort" value="C">В) Мне два билета в «бизнес».</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="comfort" value="D">Д) Только первый класс.</label>
+                      </div>
+                      <div class="text-center">
+                        <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <div class="row">
+                  <div class="col-12 col-md-6 quiz-top-left">
+                    <p>Представьте, что вы планируете путешествие. <span class="prim d-block">Вы — заказчик, а ваш багаж — это груз.</span></p>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-img-block px-0">
+                    <img src="img/quiz/5.jpg" class="quiz-img">
+                    <span class="quiz-img-text">5</span>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-top-right">
+                    <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
+                  </div>
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
+                    <div class="quiz-form-block">
+                      <span class="quiz-form-title">Что по скорости?</span>
+                      <div class="quiz-form-input">
+                        <label class="quiz-form-label">
+                          <input class="mb-0" type="radio" name="speed" value="A">
+                          А) У меня всё размеренно, никуда не тороплюсь.
+                        </label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="speed" value="B">Б) В определённое время я должен прибыть в конкретное место.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="speed" value="C">В) Чем быстрее — тем лучше.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="speed" value="D">Г) Я должен там быть вчера.</label>
+                      </div>
+                      <div class="text-center">
+                        <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <div class="row">
+                  <div class="col-12 col-md-6 quiz-top-left">
+                    <p>Представьте, что вы планируете путешествие. <span class="prim d-block">Вы — заказчик, а ваш багаж — это груз.</span></p>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-img-block px-0">
+                    <img src="img/quiz/6.jpg" class="quiz-img">
+                    <span class="quiz-img-text">6</span>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-top-right">
+                    <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
+                  </div>
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
+                    <div class="quiz-form-block">
+                      <span class="quiz-form-title">На чём предпочитаете передвигаться?</span>
+                      <div class="quiz-form-input">
+                        <label class="quiz-form-label">
+                          <input class="mb-0" type="radio" name="transport-type" value="A">
+                          А) Люблю морские круизы.
+                        </label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="transport-type" value="B">Б) Поездом надёжнее.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="transport-type" value="C">В) Прокачусь по автобану.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="transport-type" value="D">Г) Только самолёт — скорость превыше всего.</label>
+                      </div>
+                      <div class="text-center">
+                        <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <div class="row">
+                  <div class="col-12 col-md-6 quiz-top-left">
+                    <p>Представьте, что вы планируете путешествие. <span class="prim d-block">Вы — заказчик, а ваш багаж — это груз.</span></p>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-img-block px-0">
+                    <img src="img/quiz/7.jpg" class="quiz-img">
+                    <span class="quiz-img-text">7</span>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-top-right">
+                    <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
+                  </div>
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
+                    <div class="quiz-form-block">
+                      <span class="quiz-form-title">А как относитесь к дополнительным услугам?</span>
+                      <div class="quiz-form-input">
+                        <label class="quiz-form-label">
+                          <input class="mb-0" type="radio" name="additional-services" value="A">
+                          А) Я бы застраховался.
+                        </label>
+                        <label class="quiz-form-label"><input class="mb-0" type="checkbox" name="additional-services" value="B">Б) Нужно, чтобы таможня дала добро.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="checkbox" name="additional-services" value="C">В) Путешествую с котом — у него из документов только лапы и хвост.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="checkbox" name="additional-services" value="D">Г) Люблю всё делать сам, предоставьте только транспорт.</label>
+                      </div>
+                      <div class="text-center">
+                        <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <div class="row">
+                  <div class="col-12 col-md-6 quiz-top-left">
+                    <p>Представьте, что вы планируете путешествие. <span class="prim d-block">Вы — заказчик, а ваш багаж — это груз.</span></p>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-img-block px-0">
+                    <img src="img/quiz/8.jpg" class="quiz-img">
+                    <span class="quiz-img-text">8</span>
+                  </div>
+                  <div class="col-12 col-md-6 quiz-top-right">
+                    <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
+                  </div>
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
+                    <div class="quiz-form-block">
+                      <span class="quiz-form-title">Готовы выдвигаться?</span>
+                      <div class="quiz-form-input">
+                        <label class="quiz-form-label">
+                          <input class="mb-0" type="radio" name="ready" value="A">
+                          А) Чемодан собран. Поехали!
+                        </label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="ready" value="B">Б) Надо докупить ещё пару вещей в путешествие.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="ready" value="C">В) Не определился с размером чемодана.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="ready" value="D">Г) Хочется поехать, но пока не решил, куда.</label>
+                      </div>
+                      <div class="text-center">
+                        <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
                       </div>
                     </div>
                   </div>
@@ -281,26 +466,20 @@
                     <p>Представьте, что вы планируете путешествие. <span class="prim d-block">Вы — заказчик, а ваш багаж — это груз.</span></p>
                   </div>
                   <div class="col-12 col-md-6 quiz-img-block px-0">
-                    <img src="img/quiz/1.jpg" class="quiz-img">
-                    <span class="quiz-img-text">1</span>
+                    <img src="img/quiz/9.jpg" class="quiz-img">
+                    <span class="quiz-img-text">9</span>
                   </div>
                   <div class="col-12 col-md-6 quiz-top-right">
                     <p>Опрос, который поможет предложить вам оптимальную услугу. В подарок за его прохождение вы получите <span style="color: white;">100% скидку</span> на комиссию экспедитора за первую перевозку.</p>
                   </div>
-                  <div class="col-12 col-md-6 px-0">
+                  <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
-                      <span class="quiz-form-title">Сколько еще поедет пассажиров?</span>
-                      <div class="quiz-form-input">
-                        <label class="quiz-form-label">
-                          <input class="mb-0" type="radio" name="volume" value="A">
-                          A) Небольшой рюкзак.
-                        </label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="B">Б) Чемодан, который можно взять в ручную кладь.</label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="C">В) Большой чемодан на колёсиках.</label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="D">Г) Два больших чемодана на колёсиках.</label>
-                      </div>
-                      <div class="text-center">
-                        <button onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
+                      <p class="quiz-form-text">Оставьте контакт, и наш менеджер с вами свяжется, чтобы предложить вам наиболее выгодные условия сотрудничества в соответствии с вашим запросом. <b class="prim">100% скидку</b> на комиссию экспедитора за первую перевозку мы автоматически привяжем к указанному вами адресу электронной почты и номеру телефона.</p>
+                      <div class="d-flex flex-column align-items-center">
+                        <input type="text" name="user_name" placeholder="Имя" required>
+                        <input type="email" name="user_email" placeholder="Электронный адрес">
+                        <input class="form-tel" type="text" required name="user_tel" placeholder="Телефон">
+                        <button type="submit" class="btn quiz-btn">Отправить</button>
                       </div>
                     </div>
                   </div>
@@ -322,7 +501,8 @@
                   <div class="additional-card-text">
                     <span class="additional-card-title">Таможенное оформление</span>
                     <p>Оформим импорт и экспорт любых товаров. Предоставим подробные инструкции по заполнению документов или подготовим все бумаги за вас. Работаем с пулом таможенных агентов по всему миру. Оформляем как под ЭЦП клиента, так и за подписью брокера.</p>
-                    <button class="btn prim-btn additional-btn">Заказать</button>
+                    <a href="#form-section" class="btn prim-btn additional-btn">Заказать</a>
+                    
                   </div>
                 </div>
               </div>
@@ -332,7 +512,7 @@
                   <div class="additional-card-text">
                     <span class="additional-card-title">Разрешительная документация</span>
                     <p>Содействуем в получении разрешений на любые не запрещённые законодательством грузы. Работаем только с проверенными аккредитованными сертификационными центрами. Имеем контакты во всех государственных структурах.</p>
-                    <button class="btn prim-btn additional-btn">Заказать</button>
+                    <a href="#form-section" class="btn prim-btn additional-btn">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -342,7 +522,7 @@
                   <div class="additional-card-text">
                     <span class="additional-card-title">Страхование грузов</span>
                     <p>Оформим страховой полис на любой груз, следующий по любому маршруту. Пользуемся услугами только проверенных страховых компаний — лидеров рынка. В обязательном порядке страхуем все импортные грузы, перевозимые автомобильным транспортом.</p>
-                    <button class="btn prim-btn additional-btn">Заказать</button>
+                    <a href="#form-section" class="btn prim-btn additional-btn">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -352,7 +532,7 @@
                   <div class="additional-card-text">
                     <span class="additional-card-title">Перевозки ВТТ</span>
                     <p>Оформим транзитные декларации и перевезём груз в режиме внутреннего таможенного транзита. Сначала доставим его на склад временного хранения, а после таможенного оформления — вам.</p>
-                    <button class="btn prim-btn additional-btn">Заказать</button>
+                    <a href="#form-section" class="btn prim-btn additional-btn">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -388,7 +568,7 @@
             </div>
           </div>
         </section>
-        <section class="section about-section">
+        <section class="section about-section" id="about">
           <img src="img/about/bg.jpg" class="about-bg-img">
           <div class="container">
             <div class="text-center">
@@ -397,7 +577,7 @@
             <p class="about-text">Доставляем <b>по суше, воде и воздуху любые грузы</b>, в том числе — товары с ограниченными возможностями для ввоза. Оказываем транспортно-экспедиторские услуги: консалтинг, проектная логистика, страхование и таможенное оформление. Регулярно тестируем и развиваем новые, ранее не существовавшие маршруты доставки. Готовы полностью взять на себя логистику вашей компании. Работаем с каждым клиентом индивидуально и подбираем взаимовыгодные условия сотрудничества. За счёт развитой агентской сети по всему миру можем предложить несколько вариантов решения вашей задачи и помочь выбрать оптимальный.</p>
           </div>
         </section>
-        <section class="section">
+        <section class="section" id="partners">
           <div class="container">
             <div class="text-center">
               <span class="section-title">Наши партнёры</span>
@@ -436,7 +616,7 @@
             </div>
           </div>
         </section>
-        <section class="section landing-form-section">
+        <section class="section landing-form-section" id="form-section">
           <img src="img/form/bg.jpg" class="landing-form-bg">
           <div class="container">
             <div class="landing-form-wrapper">
@@ -455,7 +635,7 @@
         </section>
         
     </main>
-<footer>
+<footer id="contacts">
   <div class="container">
     <div class="footer">
       <div class="footer-img-block">

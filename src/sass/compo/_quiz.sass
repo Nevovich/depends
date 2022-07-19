@@ -3,6 +3,21 @@
         display: none
         &-current 
             display: block
+        & input:not([type=radio])
+            background: #D9D9D9
+            padding: 3px 5px
+            color: $black
+            margin-bottom: 7px
+            width: 215px
+            &::placeholder
+                color: $black
+        &.row.col-12
+            align-self: stretch
+    
+                
+            
+            
+        
     &-top 
         &-left 
             background-color: $black
@@ -27,6 +42,7 @@
         &-label 
             color: white 
             font-size: 10px
+            display: block
             &.active
                 color: $primary !important
                 position: relative
@@ -37,18 +53,29 @@
                     left: -9px
             & input
                 display: none
+        &-text 
+            color: white
+            font-size: 10px
+
     &-img
         width: 100%
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
         &-block
             position: relative
+            overflow: hidden
+            text-align: center
         &-text 
-            position: absolute
-            z-index: 2
-            margin-left: 50vw
-            left: -50%
+            // position: absolute
+            // z-index: 2
+            // margin-left: 50vw
+            // left: -50%
             font-weight: bold
             font-size: 120px
-            filter: blur(31px)
+            height: 100%
+            // filter: blur(31px)
             color: rgba(255, 255, 255, 0.62)
     &-btn 
         background: rgba(255, 255, 255, 0)
@@ -57,10 +84,85 @@
         font-size: 11px
         padding: 8px 46px
         margin-top: 22px
-        &:hover
+        &:not(:disabled):hover
             box-shadow: 0px 4px 25px rgba(255, 168, 0, 0.69)
             color: white
 
 
 
-// @media (min-width: 768px )
+@media (min-width: 567px )
+    .quiz
+        &-block 
+            & input:not([type=radio])
+                width: 315px
+        &-top 
+            &-left
+                & p 
+                    text-align: center
+                    font-size: 16px
+            &-right
+                & p 
+                    text-align: center
+                    font-size: 16px
+        &-form 
+            &-title 
+                font-size: 20px
+            &-input 
+                margin-top: 20px
+            &-label
+                font-size: 16px
+                &.active::before
+                    top: -2px
+                    transform: scaleX(150%)
+            &-text 
+                font-size: 14px
+        &-btn 
+            font-size: 16px
+@media (min-width: 768px )
+    .quiz
+        &-block 
+            & input:not([type=radio])
+                width: 300px
+                font-size: 16px
+        &-top 
+            &-right
+                order: 2
+                padding: 12px 12px
+                & p 
+                    text-align: left
+            &-left
+                & p 
+                    text-align: left
+        &-img 
+            height: 100%
+            object-fit: cover
+            &-block 
+                order: 3
+            &-text 
+                // width: 100%
+                // margin-left: 0
+                font-size: 210px
+                // text-align: center
+        &-form
+            &-wrapper 
+                order: 4
+            &-block 
+                height: 100%
+                padding: 25px 30px
+@media (min-width: 1200px )
+    .quiz
+        &-block
+            & input:not([type=radio])
+                width: 350px
+        &-top 
+            &-left 
+                padding: 26px 60px
+            &-right 
+                padding: 22px 60px
+        &-form
+            &-block 
+                padding: 35px 60px
+            &-text 
+                // font-size: 24px
+        &-img 
+            &-text 

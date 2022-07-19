@@ -1,12 +1,12 @@
 
 
-// // Smooth scroll
-// $('#headerNavbar a[href^="#"]').click(function (){
-//     let elementClick = $(this).attr("href");
-//     let destination = $(elementClick).offset().top;
-//     jQuery("html:not(:animated), body:not(:animated)").animate({scrollTop: destination}, 800);
-//     return false;
-// });
+// Smooth scroll
+$('a[href^="#"]').click(function (){
+    let elementClick = $(this).attr("href");
+    let destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated), body:not(:animated)").animate({scrollTop: destination}, 800);
+    return false;
+});
 
 // // Phone validation
 $(".form-tel").mask("+7 (999) 999-99-99");
@@ -109,6 +109,7 @@ radiosArray.forEach( function(i) {
                     ij.parentElement.classList.remove('active')
                 }
             });
+            i.parentElement.parentElement.parentElement.querySelector('.quiz-btn').removeAttribute('disabled')
     })
 
 });
@@ -116,14 +117,9 @@ radiosArray.forEach( function(i) {
 let quizNext = () => {
     let currentQuizSlide = document.querySelectorAll(`.quiz-block-current`);
     currentQuizSlide = currentQuizSlide[0]
-    console.log(currentQuizSlide);
+    // console.log(currentQuizSlide);
     let nextQuizSlide = currentQuizSlide.nextSibling.nextSibling;
-    if (nextQuizSlide.classList.contains('quiz-block-last') != true) {
-        currentQuizSlide.classList.remove('quiz-block-current');
-        nextQuizSlide.classList.add('quiz-block-current')
-    } else {
-        currentQuizSlide.classList.remove('quiz-block-current');
-        // nextQuizSlide.classList.add.quiz-block-current
-    };
-    // return false
+    currentQuizSlide.classList.remove('quiz-block-current');
+    nextQuizSlide.classList.add('quiz-block-current')
+    return false
 };
