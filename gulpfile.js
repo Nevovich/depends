@@ -1,10 +1,10 @@
 let resultFolder = 'dist';
 let sourceFolder = 'src'; 
 // deploy data:
-let domenName = 'nevovichweb.ru'
-let ftpHost = '185.137.235.119'
-let ftpUser = 'sorokina'
-// let ftpPass = 'Qf2KfLZ7!'
+let domenName = 'depends.ru'
+let ftpHost = 'depends.ru'
+let ftpUser = 'depends_ru_usr'
+let ftpPass = 'hylDCg!Pan4G5xh73'
 
 
 
