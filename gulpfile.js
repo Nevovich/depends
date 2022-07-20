@@ -2,9 +2,9 @@ let resultFolder = 'dist';
 let sourceFolder = 'src'; 
 // deploy data:
 let domenName = 'depends.ru'
-let ftpHost = 'depends.ru'
-let ftpUser = 'depends_ru_usr'
-let ftpPass = 'hylDCg!Pan4G5xh73'
+let ftpHost = '178.208.92.90'
+let ftpUser = 'depends_ru_user'
+let ftpPass = 'hylDCgPan4G5xh73'
 
 
 
@@ -105,7 +105,7 @@ function fullDeploy(done) {
     });
     let globs = [resultFolder + '/**']
         return src(globs, {buffer: false})
-        .pipe(conn.dest('/www/'+ domenName + '/'));
+        .pipe(conn.dest('/var/www/depends_ru_usr/data/www/'+ domenName + '/'));
         done();
 };  
 // exports.default = defaultTask

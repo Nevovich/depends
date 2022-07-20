@@ -3,28 +3,46 @@
 // Smooth scroll
 $('a[href^="#"]').click(function (){
     let elementClick = $(this).attr("href");
-    let destination = $(elementClick).offset().top;
+    let destination = $(elementClick).offset().top - 72;
+    console.log(destination);
     jQuery("html:not(:animated), body:not(:animated)").animate({scrollTop: destination}, 800);
+    $('.navbar-collapse').collapse('hide')
     return false;
 });
 
 // // Phone validation
 $(".form-tel").mask("+7 (999) 999-99-99");
 
-// // AJAX form sender
-// $('.form').on('submit', function(event) {
-//     event.preventDefault();
-//     $.ajax({
-//       url:"tg-form.php",
-//       type: 'POST',
-//       data: $(this).serialize(),
-//       success: function(data) {
-//         // alert('Спасибо за заявку, скоро мы вам перезвоним.');
-//         // console.log(data);
-//         $('.form').not('.partner-form')[0].reset();
-//       },
-//     });
-// });
+// AJAX form sender
+$('.landing-form').on('submit', function(event) {
+    event.preventDefault();
+    $.ajax({
+      url:"server/land-form.php",
+      type: 'POST',
+      data: $(this).serialize(),
+      success: function(data) {
+        alert('Спасибо за заявку, скоро мы вам перезвоним.');
+        // console.log(data);
+        $('.landing-form')[0].reset();
+      },
+    });
+});
+
+$('#quiz-form').on('submit', function(event) {
+    event.preventDefault();
+    $.ajax({
+      url:"server/quiz-form.php",
+      type: 'POST',
+      data: $(this).serialize(),
+      success: function(data) {
+        alert('Спасибо за заявку, скоро мы вам перезвоним.');
+        // console.log(data);
+        $('#quiz-form')[0].reset();
+      },
+    });
+});
+
+
 function navbarSwap() {
     if ($('.navbar-toggler').attr('aria-expanded')!="true") {
         // console.log('открыл');

@@ -215,7 +215,7 @@
             <span class="section-title">Поможем с выбором</span>
           </div>
           <div class="container-fluid" style="max-width: 1440px; margin-left: auto; margin-right: auto;">
-            <form class="form">
+            <form class="form" id="quiz-form">
               <div class="quiz-block quiz-block-current">
                 <div class="row">
                   <div class="col-12 col-md-6 quiz-top-left">
@@ -231,14 +231,14 @@
                   <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
                       <span class="quiz-form-title">Какого объёма ваш багаж?</span>
-                      <div class="quiz-form-input">
+                      <div class="quiz-form-input mt-3">
                         <label class="quiz-form-label">
-                          <input class="mb-0" type="radio" name="объём" value="A">
+                          <input class="mb-0" type="radio" name="volume" value="A">
                           A) Небольшой рюкзак.
                         </label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="объём" value="B">Б) Чемодан, который можно взять в ручную кладь.</label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="объём" value="C">В) Большой чемодан на колёсиках.</label>
-                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="объём" value="D">Г) Два больших чемодана на колёсиках.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="B">Б) Чемодан, который можно взять в ручную кладь.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="C">В) Большой чемодан на колёсиках.</label>
+                        <label class="quiz-form-label"><input class="mb-0" type="radio" name="volume" value="D">Г) Два больших чемодана на колёсиках.</label>
                       </div>
                       <div class="text-center">
                         <button disabled onclick="quizNext(); return false" class="btn quiz-btn">Далее</button>
@@ -263,7 +263,7 @@
                   <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
                       <span class="quiz-form-title">У вас тяжелый багаж?</span>
-                      <div class="quiz-form-input">
+                      <div class="quiz-form-input mt-3">
                         <label class="quiz-form-label">
                           <input class="mb-0" type="radio" name="weight" value="A">
                           А) Донесу в руках.
@@ -294,7 +294,7 @@
                   <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
                       <span class="quiz-form-title">Куда отправляетесь?</span>
-                      <div class="quiz-form-input">
+                      <div class="quiz-form-input mt-3">
                         <label class="quiz-form-label">
                           <input class="mb-0" type="radio" name="direction" value="A">
                           А) Путешествовать по России.
@@ -325,7 +325,7 @@
                   <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
                       <span class="quiz-form-title">Каким классом поедете?</span>
-                      <div class="quiz-form-input">
+                      <div class="quiz-form-input mt-3">
                         <label class="quiz-form-label">
                           <input class="mb-0" type="radio" name="comfort" value="A">
                           А) Привык в «экономе»: в тесноте, да не в обиде.
@@ -356,7 +356,7 @@
                   <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
                       <span class="quiz-form-title">Что по скорости?</span>
-                      <div class="quiz-form-input">
+                      <div class="quiz-form-input mt-3">
                         <label class="quiz-form-label">
                           <input class="mb-0" type="radio" name="speed" value="A">
                           А) У меня всё размеренно, никуда не тороплюсь.
@@ -387,7 +387,7 @@
                   <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
                       <span class="quiz-form-title">На чём предпочитаете передвигаться?</span>
-                      <div class="quiz-form-input">
+                      <div class="quiz-form-input mt-3">
                         <label class="quiz-form-label">
                           <input class="mb-0" type="radio" name="transport-type" value="A">
                           А) Люблю морские круизы.
@@ -450,7 +450,7 @@
                   <div class="col-12 col-md-6 px-0 quiz-form-wrapper">
                     <div class="quiz-form-block">
                       <span class="quiz-form-title">Готовы выдвигаться?</span>
-                      <div class="quiz-form-input">
+                      <div class="quiz-form-input mt-3">
                         <label class="quiz-form-label">
                           <input class="mb-0" type="radio" name="ready" value="A">
                           А) Чемодан собран. Поехали!

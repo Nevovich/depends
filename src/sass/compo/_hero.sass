@@ -25,9 +25,13 @@
         color: white
         position: relative
         overflow: hidden
+        background: url('../img/hero/hero-bg-mobile2.jpg') no-repeat
+        background-position: center center
+        background-size: cover
         // height: 1000px
         // padding-top: 35px
         &::before 
+            display: none
             content: ""
             position: absolute
             height: 100%
@@ -46,7 +50,7 @@
         margin-top: 80px
     &-block 
         &-text 
-            margin: 117px 0 94px
+            margin: 117px 0 140px
         &-features
             padding: 25px 0
             background-color: rgba(0, 0, 0, 0.61)
@@ -98,7 +102,9 @@
 @media (min-width: 768px )
     .hero
         &-wrapper
+            background: 0
             &::before 
+                display: block
                 width: 140vw
                 right: auto
                 // background: url('../img/hero/hero-bg.jpg') center right 155% no-repeat
